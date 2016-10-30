@@ -80,7 +80,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mFragments = new ArrayList<>();
         mFragments.add(new ScheduleFragment());
         mFragments.add(new PlanFragment());
-        mFragments.add(new Fragment());//这是中间加号处占位的，没有实际用处
+        mFragments.add(new Fragment());//这是中间加号处占位的，没有实际用处...
         mFragments.add(new MessageFragment());
         mFragments.add(new MailListFragment());
 
