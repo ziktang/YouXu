@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/layout_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/login_psw_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/username"
+                android:maxLength="18"
+                android:text=""
+                android:textSize="18sp"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/login_name_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/psw"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:text=""
+                android:textColor="@color/font_gray"
+                android:textSize="18sp"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/code_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/code_input"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:textSize="20sp"
+                />
+
+            <ImageView
+                android:id="@+id/code_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="220dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="1dp"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"
+        android:visibility="invisible"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/register_num_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="手机号"
+                android:inputType="phone"
+                android:maxLength="18"
+                android:text=""
+                android:textColor="@color/font_gray"
+                android:textSize="18sp"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/register_psw_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/psw"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:text=""
+                android:textColor="@color/font_gray"
+                android:textSize="18sp"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/nickName_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="昵称"
+                android:inputType="text"
+                android:maxLength="18"
+                android:text=""
+                android:textColor="@color/font_gray"
+                android:textSize="18sp"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <EditText
+                android:id="@+id/register_code"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:textColor="@color/font_gray"
+                android:textColorHint="@color/font_light"
+                android:textSize="20sp"
+                />
+
+            <com.fl.schedule.widget.CodeButton
+                android:id="@+id/num_code"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/code_bg"
+                android:text="验证码"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="1dp"
+            />
+
+    </LinearLayout>
+</FrameLayout>

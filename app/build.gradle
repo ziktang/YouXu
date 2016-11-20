@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'org.greenrobot.greendao'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -11,6 +12,25 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    sourceSets{
+        main{
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java','.apt_generated']
+            assets.srcDirs = ['src/main/assets']
+            res.srcDirs =
+                    [
+                            'src/main/res/home',
+                            'src/main/res/login_register',
+                            'src/main/res/schedule',
+                            'src/main/res/plan',
+                            'src/main/res/daily',
+                            'src/main/res/mainlist',
+                            'src/main/res/resource',
+                            'src/main/res/'
+                    ]
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -19,15 +39,52 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs "libs"
+    }
+
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    testCompile 'junit:junit:4.12'
+
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
+
+    //mob短信验证码
+    compile name:'SMSSDK-2.1.2',ext:'aar'
+    //依赖注入
     compile 'com.jakewharton:butterknife:8.2.1'
     apt 'com.jakewharton:butterknife-compiler:8.2.1'
-    testCompile 'junit:junit:4.12'
+
+    //tab
     compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.8@aar'
+
+    //recycleview定制框架
+    compile 'com.jude:easyrecyclerview:4.2.6'
+    //图片加载框架
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    //rxjava,retrofit,rxbinding,gson
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'io.reactivex:rxjava:x.y.z'
+    compile 'io.reactivex:rxandroid:+'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+
+    //切换开关
+    compile 'com.zcw:togglebutton-library:1.0.0'
+    //日期选择器
+    compile 'cn.qqtheme.framework:WheelPicker:latest.release'
+
+    //数据库
+    compile 'org.greenrobot:greendao:3.2.0'
+
 }

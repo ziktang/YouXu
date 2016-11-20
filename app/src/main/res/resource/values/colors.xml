@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#56abe4</color>
+    <color name="colorPrimaryDark">#2196F3</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transport">#00FFFFFF</color>
+    <color name="red">#EF5350</color>
+
+    <!-- bootom_tab-->
+    <color name="tab_sel">#56abe4</color>
+    <color name="tab_nor">#a9b7b7</color>
+
+    <!-- navigation-->
+    <color name="nav_head">#FF424242</color>
+
+    <!-- main_toolbar-->
+    <color name="add_menu_item">#F0F0F0</color>
+
+    <!-- add_menu-->
+    <color name="daily_color">#f4c600</color>
+    <color name="plan_color">#00bb9c</color>
+    <color name="schedule_color">#56abe4</color>
+    <color name="add_menu_bg">#EEEAEBDE</color>
+
+
+    <color name="code_gray">#D6D7D7</color>
+    <color name="font_gray">#55000000</color>
+    <color name="font_light">#9F9F9F</color>
+    <color name="blue_dark">#1565c0</color>
+    <color name="switch_green">#4BED90</color>
+    <color name="switch_border_gray">#DADBDA</color>
+    <color name="ripple_bg">#D7D7D7</color>
+    <color name="gray_bg">#F0F0F0</color>
+    <!--<color name="gray_bg">#F2F4F7</color>-->
+
+
+
+
+
+
+</resources>

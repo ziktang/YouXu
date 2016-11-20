@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fl.schedule.schedule.activity.AddScheduleActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:id="@+id/add_sche_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="新建日程"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:hint="准备做什么"
+            android:lines="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:textColorHint="@color/font_light"
+            android:textSize="20sp"
+            />
+
+        <RelativeLayout
+            style="@style/add_schedule_rl"
+            android:descendantFocusability="blocksDescendants"
+            >
+
+            <TextView
+                style="@style/add_schedule_text_name"
+                android:text="全天事件"
+
+                />
+
+            <com.zcw.togglebutton.ToggleButton
+                android:id="@+id/all_day_toggle"
+                android:layout_width="48dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:tbBorderWidth="1dp"
+                app:tbOffBorderColor="@color/switch_border_gray"
+                app:tbOffColor="@color/white"
+                app:tbOnColor="@color/switch_green"
+                app:tbSpotColor="@color/white"
+                >
+            </com.zcw.togglebutton.ToggleButton>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/startTime"
+            style="@style/add_schedule_rl">
+
+            <TextView
+                style="@style/add_schedule_text_name"
+                android:text="开始时间"
+                />
+
+            <TextView
+                android:id="@+id/startTimeTv"
+                style="@style/add_schedule__text_value"
+                android:drawablePadding="5dp"
+                android:text="2016年11月12日 12:00"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/endTime"
+            style="@style/add_schedule_rl">
+
+            <TextView
+                style="@style/add_schedule_text_name"
+                android:text="结束时间"
+                />
+
+            <TextView
+                android:id="@+id/endTimeTv"
+                style="@style/add_schedule__text_value"
+                android:drawablePadding="5dp"
+                android:text="2016年11月12日 14:00"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/warnTime"
+            style="@style/add_schedule_rl">
+
+            <TextView
+                style="@style/add_schedule_text_name"
+                android:text="提醒"
+                />
+
+            <TextView
+                android:id="@+id/warnTimeTv"
+                style="@style/add_schedule__text_value"
+                android:drawablePadding="5dp"
+                android:text="10分钟前"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地点:"
+                android:textColor="@color/font_light"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/place"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:paddingLeft="5dp"
+                android:lines="1"
+                android:textColor="@color/font_gray"
+                android:textSize="18sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="备注:"
+                android:textColor="@color/font_light"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/note"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:paddingLeft="5dp"
+                android:lines="1"
+                android:textColor="@color/font_gray"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sche_edit_status"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:elevation="2dp"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/un_done"
+                android:drawablePadding="5dp"
+                android:textColor="@color/colorPrimary"
+                android:text="标记完成"
+                android:textSize="18dp"
+                />
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="24dp"
+            android:background="@color/ripple_bg"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/delete"
+                android:drawablePadding="5dp"
+                android:textColor="@color/colorPrimary"
+                android:text="删除"
+                android:textSize="18dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

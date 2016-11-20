@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/date_weather"/>
+
+
+    <com.fl.schedule.widget.WrapContentHeightViewPager
+        android:id="@+id/calendar_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <com.jude.easyrecyclerview.EasyRecyclerView
+            android:id="@+id/schedule_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_bg"
+            >
+        </com.jude.easyrecyclerview.EasyRecyclerView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nav_head"
+            android:layout_above="@+id/cal_tab"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_add_black_16dp"
+            app:elevation="3dp"
+            app:fabSize="mini"
+            />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/cal_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/white"
+            android:src="@drawable/today"
+            app:elevation="3dp"
+            app:fabSize="mini"
+            />
+
+    </RelativeLayout>
+</LinearLayout>
