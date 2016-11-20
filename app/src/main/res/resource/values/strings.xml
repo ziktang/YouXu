@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Schedule</string>
+    <string name="app_name">有序</string>
     <string name="username">手机号/账户名</string>
     <string name="psw">密码</string>
     <string name="login">登录</string>
