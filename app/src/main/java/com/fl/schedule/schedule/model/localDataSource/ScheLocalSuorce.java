@@ -4,9 +4,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.fl.schedule.app.MyApplication;
+import com.fl.schedule.daily.model.bean.DaoMaster;
+import com.fl.schedule.daily.model.bean.DaoSession;
 import com.fl.schedule.home.model.bean.UserConfig;
-import com.fl.schedule.schedule.model.bean.DaoMaster;
-import com.fl.schedule.schedule.model.bean.DaoSession;
 import com.fl.schedule.schedule.model.bean.Schedule;
 import com.fl.schedule.schedule.model.bean.ScheduleDao;
 
