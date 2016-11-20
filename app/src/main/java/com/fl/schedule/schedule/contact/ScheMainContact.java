@@ -3,10 +3,9 @@ package com.fl.schedule.schedule.contact;
 import com.fl.schedule.base.contact.BaseModel;
 import com.fl.schedule.base.contact.BasePresenter;
 import com.fl.schedule.base.contact.BaseView;
+import com.fl.schedule.home.model.bean.WeatherInfo;
 import com.fl.schedule.schedule.model.bean.CalDate;
 import com.fl.schedule.schedule.model.bean.Schedule;
-import com.fl.schedule.schedule.model.bean.WeatherInfo;
-
 import java.util.List;
 
 /**

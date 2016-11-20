@@ -1,4 +1,4 @@
-package com.fl.schedule.Schedule;
+package com.fl.schedule.plan.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,13 +13,12 @@ import com.fl.schedule.R;
  * Created by tctctc on 2016/10/26.
  */
 
-public class ScheduleFragment extends Fragment{
-
+public class PlanFragment extends Fragment{
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_schedule,null);
+        View view = inflater.inflate(R.layout.fragmen_plan,null);
         return view;
     }
 }

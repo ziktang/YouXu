@@ -1,4 +1,4 @@
-package com.fl.schedule.Message;
+package com.fl.schedule.mailList.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,12 +13,12 @@ import com.fl.schedule.R;
  * Created by tctctc on 2016/10/26.
  */
 
-public class MessageFragment extends Fragment{
+public class MailListFragment extends Fragment{
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_message,null);
+        View view = inflater.inflate(R.layout.fragment_mail_list,null);
         return view;
     }
 }
