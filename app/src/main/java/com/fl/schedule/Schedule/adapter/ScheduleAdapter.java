@@ -1,4 +1,4 @@
-package com.fl.schedule.Schedule.adapter;
+package com.fl.schedule.schedule.adapter;
 
 /**
  * Created by tctctc on 2016/11/14.

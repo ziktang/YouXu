@@ -1,4 +1,7 @@
-package com.fl.schedule.LoginRegister.model;
+package com.fl.schedule.loginRegister.model;
+
+import com.fl.schedule.app.ApiConfig;
+import com.fl.schedule.home.model.bean.UserInfo;
 
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -35,7 +38,7 @@ public class LoReClient {
                     .connectTimeout(15, TimeUnit.SECONDS)
                     .build();
             mRetrofit = new Retrofit.Builder()
-                    .baseUrl(Config.baseUrl)
+                    .baseUrl(ApiConfig.baseUrl)
                     .client(client)
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
@@ -49,7 +52,7 @@ public class LoReClient {
         Observable<ResponseBody> getQueryTest(@Query("name") String name);
 
         @POST("test")
-        Observable<ResponseBody> postBodyTest(@Body User user);
+        Observable<ResponseBody> postBodyTest(@Body UserInfo user);
 
         @FormUrlEncoded
         @POST("test")

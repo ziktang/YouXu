@@ -6,8 +6,8 @@ import java.security.SecureRandom;
  * Created by tctctc on 2016/11/18.
  */
 
-public class CustomUUID {
-    private static CustomUUID sCustomUUID;
+public class CustomUUId {
+    private static CustomUUId sCustomUUID;
     // 基准时间
     private long twepoch = 1288834974657L; //Thu, 04 Nov 2010 01:42:54 GMT
     // 区域标志位数
@@ -37,14 +37,14 @@ public class CustomUUID {
     private final long workerId;
     private final long regionId;
 
-    public static CustomUUID getInstance(){
+    public static CustomUUId getInstance(){
         if (sCustomUUID==null){
-            sCustomUUID = new CustomUUID(maxWorkerId,maxRegionId);
+            sCustomUUID = new CustomUUId(maxWorkerId,maxRegionId);
         }
         return sCustomUUID;
     }
 
-    public CustomUUID(long workerId, long regionId) {
+    public CustomUUId(long workerId, long regionId) {
 
         // 如果超出范围就抛出异常
         if (workerId > maxWorkerId || workerId < 0) {
@@ -58,7 +58,7 @@ public class CustomUUID {
         this.regionId = regionId;
     }
 
-    public CustomUUID(long workerId) {
+    public CustomUUId(long workerId) {
         // 如果超出范围就抛出异常
         if (workerId > maxWorkerId || workerId < 0) {
             throw new IllegalArgumentException("worker Id can't be greater than %d or less than 0");

@@ -5,10 +5,7 @@ import android.util.Log;
 import com.fl.schedule.home.model.bean.UserConfig;
 import com.fl.schedule.schedule.contact.AddScheContact;
 import com.fl.schedule.schedule.model.bean.Schedule;
-import com.fl.schedule.utils.CustomUUID;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import com.fl.schedule.utils.CustomUUId;
 
 /**
  * Created by tctctc on 2016/11/18.
@@ -107,7 +104,7 @@ public class AddScheDataSource implements AddScheContact.DataSource {
         if (mType == 1) {
             mSchedule = ScheDataSource.getInstance().get(id);
         } else {
-            mSchedule = new Schedule(CustomUUID.getInstance().generate());
+            mSchedule = new Schedule(CustomUUId.getInstance().generate());
             mSchedule.setUserId(UserConfig.getInstance().getUserInfo().getId());
             mSchedule.setStartTime(initDate);
             mSchedule.setEndTime(initDate);
