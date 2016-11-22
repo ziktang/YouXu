@@ -26,7 +26,7 @@ import com.fl.schedule.daily.activity.DailyMainActivity;
 import com.fl.schedule.home.model.bean.TabEntity;
 import com.fl.schedule.home.model.bean.UserConfig;
 import com.fl.schedule.home.model.bean.UserInfo;
-import com.fl.schedule.mailList.fragment.MailListFragment;
+import com.fl.schedule.msg.fragment.MsgFragment;
 import com.fl.schedule.plan.fragment.PlanFragment;
 import com.fl.schedule.schedule.fragment.ScheduleFragment;
 import com.fl.schedule.utils.UiUtils;
@@ -87,7 +87,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mFragments.add(new PlanFragment());
         mFragments.add(new Fragment());//这是中间加号处占位的，没有实际用处...
         mFragments.add(new PlanFragment());
-        mFragments.add(new MailListFragment());
+        mFragments.add(new MsgFragment());
 
         mTabEntities = new ArrayList<>();
         for (int i = 0; i < mFragments.size(); i++) {
