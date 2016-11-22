@@ -32,11 +32,21 @@
     <color name="switch_border_gray">#DADBDA</color>
     <color name="ripple_bg">#D7D7D7</color>
     <color name="gray_bg">#F0F0F0</color>
-    <!--<color name="gray_bg">#F2F4F7</color>-->
+    <color name="window_white">#EEEEEE</color>
 
 
 
-
+    <!-- 日记主题选择 -->
+    <color name="daily_blue">#00B1C6</color>
+    <color name="daily_blue_black">#364656</color>
+    <color name="daily_blue_dark">#166096</color>
+    <color name="daily_purple">#665696</color>
+    <color name="daily_green">#21A675</color>
+    <color name="daily_brown">#96766B</color>
+    <color name="daily_blue_too_dark">#366686</color>
+    <color name="daily_blue_gray">#607D8B</color>
+    <color name="daily_yellow">#f4c600</color>
+    <color name="daily_red">#EF5350</color>
 
 
 </resources>

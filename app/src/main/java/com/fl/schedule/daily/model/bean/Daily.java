@@ -5,6 +5,7 @@ import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.NotNull;
 
 import java.util.List;
+
 import org.greenrobot.greendao.annotation.Generated;
 
 /**
@@ -21,20 +22,32 @@ public class Daily {
     private String date;
     @NotNull
     private String time;
+    private String weather;
+    private String place;
+
     private String mood;
     @NotNull
     private String description;
-    private String photos;
-    @Generated(hash = 2111600196)
+    private String photosPath;
+    private String voicePath;
+    private int color;
+    private String tags;
+    @Generated(hash = 2047602879)
     public Daily(long id, long userId, @NotNull String date, @NotNull String time,
-            String mood, @NotNull String description, String photos) {
+            String weather, String place, String mood, @NotNull String description,
+            String photosPath, String voicePath, int color, String tags) {
         this.id = id;
         this.userId = userId;
         this.date = date;
         this.time = time;
+        this.weather = weather;
+        this.place = place;
         this.mood = mood;
         this.description = description;
-        this.photos = photos;
+        this.photosPath = photosPath;
+        this.voicePath = voicePath;
+        this.color = color;
+        this.tags = tags;
     }
     @Generated(hash = 2135515054)
     public Daily() {
@@ -63,6 +76,18 @@ public class Daily {
     public void setTime(String time) {
         this.time = time;
     }
+    public String getWeather() {
+        return this.weather;
+    }
+    public void setWeather(String weather) {
+        this.weather = weather;
+    }
+    public String getPlace() {
+        return this.place;
+    }
+    public void setPlace(String place) {
+        this.place = place;
+    }
     public String getMood() {
         return this.mood;
     }
@@ -75,10 +100,28 @@ public class Daily {
     public void setDescription(String description) {
         this.description = description;
     }
-    public String getPhotos() {
-        return this.photos;
+    public String getPhotosPath() {
+        return this.photosPath;
     }
-    public void setPhotos(String photos) {
-        this.photos = photos;
+    public void setPhotosPath(String photosPath) {
+        this.photosPath = photosPath;
+    }
+    public String getVoicePath() {
+        return this.voicePath;
+    }
+    public void setVoicePath(String voicePath) {
+        this.voicePath = voicePath;
+    }
+    public int getColor() {
+        return this.color;
+    }
+    public void setColor(int color) {
+        this.color = color;
+    }
+    public String getTags() {
+        return this.tags;
+    }
+    public void setTags(String tags) {
+        this.tags = tags;
     }
 }

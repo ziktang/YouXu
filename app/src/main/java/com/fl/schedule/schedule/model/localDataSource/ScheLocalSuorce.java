@@ -47,7 +47,7 @@ public class ScheLocalSuorce {
 
     public ArrayList<Schedule> getListByDate(String startDate) {
         QueryBuilder qb = mScheduleDao.queryBuilder();
-        return (ArrayList<Schedule>) qb.where(ScheduleDao.Properties.StartDate.eq(startDate), ScheduleDao.Properties.UserId.eq(UserConfig.getInstance().getUserInfo().getId())).list();
+        return (ArrayList<Schedule>) qb.where(ScheduleDao.Properties.StartDate.eq(startDate), ScheduleDao.Properties.UserId.eq(UserConfig.getInstance().getUserInfo().getId())).orderAsc(ScheduleDao.Properties.StartTime).list();
     }
 
     public boolean delete(long id) {

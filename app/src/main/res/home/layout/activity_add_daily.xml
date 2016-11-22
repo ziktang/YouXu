@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fl.schedule.daily.activity.AddDailyActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/add_daily_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/transport"
+            >
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <com.jude.easyrecyclerview.EasyRecyclerView
+            android:id="@+id/img_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.jude.easyrecyclerview.EasyRecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/daily_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="2016-11-21 周一"
+                    />
+
+                <TextView
+                    android:id="@+id/daily_weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:text="晴天"
+                    />
+
+
+                <TextView
+                    android:id="@+id/daily_mood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="愤怒"
+                    />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:minLines="10"
+                android:background="@null"
+                android:textSize="20sp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_place"
+                    />
+
+                <ImageView
+                    android:id="@+id/weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_weather"
+                    />
+
+                <ImageView
+                    android:id="@+id/mood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_emoji"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

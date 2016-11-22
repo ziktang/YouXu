@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/picture"
+        android:title="图片"
+        android:icon="@drawable/ic_camera"
+        app:showAsAction="always"
+        android:orderInCategory="1"
+        />
+
+    <item
+        android:id="@+id/theme"
+        android:title="主题"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_theme_select"
+        android:orderInCategory="2"
+        />
+
+    <item
+        android:id="@+id/delete"
+        android:title="删除"
+        app:showAsAction="never"
+        android:orderInCategory="1"
+        />
+</menu>

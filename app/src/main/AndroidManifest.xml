@@ -39,6 +39,8 @@
         </activity>
         <activity android:name=".daily.activity.DailyMainActivity">
         </activity>
+        <activity android:name=".daily.activity.AddDailyActivity">
+        </activity>
     </application>
 
 </manifest>

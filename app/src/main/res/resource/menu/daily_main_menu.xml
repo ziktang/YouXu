@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/search_bt"
+        android:icon="@drawable/ic_search_daily"
+        android:orderInCategory="1"
+        android:title="搜索日记"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/book_daily"
+        android:icon="@drawable/ic_book_daily"
+        android:orderInCategory="2"
+        android:title="日记本"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/egg_daily"
+        android:icon="@drawable/egg"
+        android:orderInCategory="2"
+        android:title="彩蛋"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/manny_delete"
+        android:orderInCategory="98"
+        android:title="批量删除"
+        app:showAsAction="never"
+        />
+</menu>

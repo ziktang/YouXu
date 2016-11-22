@@ -86,4 +86,5 @@ dependencies {
 
     //数据库
     compile 'org.greenrobot:greendao:3.2.0'
+
 }

@@ -2,7 +2,6 @@ package com.fl.schedule.app;
 
 import android.app.Application;
 import android.content.Context;
-
 import com.fl.schedule.utils.ImageLoadUtils;
 
 import cn.smssdk.SMSSDK;

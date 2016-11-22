@@ -1,5 +1,6 @@
 package com.fl.schedule.home.activity;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 
 import com.fl.schedule.R;
 import com.fl.schedule.base.activity.BaseActivity;
+import com.fl.schedule.daily.activity.DailyMainActivity;
 import com.fl.schedule.home.model.bean.TabEntity;
 import com.fl.schedule.home.model.bean.UserConfig;
 import com.fl.schedule.home.model.bean.UserInfo;
@@ -148,7 +150,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 mDrawer.closeDrawers();
                 switch (item.getItemId()) {
                     case R.id.diary:
-                        Snackbar.make(mNav, "" + item.getTitle(), Snackbar.LENGTH_SHORT).show();
+//                        Snackbar.make(mNav, "" + item.getTitle(), Snackbar.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this, DailyMainActivity.class);
+                        startActivity(intent);
                         break;
                     case R.id.bind_phone:
                         Snackbar.make(mNav, "" + item.getTitle(), Snackbar.LENGTH_SHORT).show();
